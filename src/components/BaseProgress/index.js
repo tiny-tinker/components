@@ -1,8 +1,8 @@
-import aBaseProgress from './BaseProgress.vue'
+import aProgress from './BaseProgress.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  aBaseProgress
+  aProgress
 }
 
 const VuePlugin = {

@@ -1,8 +1,8 @@
-import asyncyBaseAlert from './BaseAlert.vue'
+import aAlert from './BaseAlert.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  asyncyBaseAlert
+  aAlert
 }
 
 const VuePlugin = {

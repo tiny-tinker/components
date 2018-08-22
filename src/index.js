@@ -1,4 +1,5 @@
 import BootstrapVue from 'bootstrap-vue' // Import Bootstrap-Vue as well
+import VueLazyload from 'vue-lazyload';
 import * as components from './components'
 import * as directives from './directives'
 import { vueUse } from './utils/plugins'
@@ -26,6 +27,7 @@ const VuePlugin = {
 
     // Register bootstrap-vue
     Vue.use(BootstrapVue)
+    Vue.use(VueLazyload)
   }
 }
 

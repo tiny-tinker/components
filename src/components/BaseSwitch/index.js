@@ -1,8 +1,8 @@
-import aBaseSwitch from './BaseSwitch.vue'
+import aSwitch from './BaseSwitch.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  aBaseSwitch
+  aSwitch
 }
 
 const VuePlugin = {
