@@ -9,6 +9,15 @@
 @import "bootstrap/mixins";
 @import "custom/mixins";
 
+// Vendor
+
+@import "custom/vendor/flatpickr.scss";
+@import "custom/vendor/headroom.scss";
+@import "custom/vendor/nouislider.scss";
+
+// Color theme
+@import "./color.scss";
+
 // Bootstrap components
 
 @import "bootstrap/root";
@@ -75,8 +84,4 @@
 @import "custom/section.scss";
 @import "custom/type.scss";
 
-// Vendor
 
-@import "custom/vendor/flatpickr.scss";
-@import "custom/vendor/headroom.scss";
-@import "custom/vendor/nouislider.scss";

@@ -5,7 +5,7 @@ set -e
 rm -rf dist lib es
 
 # ES build (es/)
-BABEL_ENV=es babel -d es  -D --ignore '*.spec.js,*.json,node_modules,fixtures' src/
+BABEL_ENV=es babel -d es  -D --ignore '*.spec.js,*.story.js,*.json,node_modules,fixtures' src/
 
 # Rollup (dist/)
 rollup -c scripts/rollup.config.js

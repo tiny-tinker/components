@@ -1,8 +1,8 @@
-import aBaseSlider from './BaseSlider.vue'
+import aSlider from './BaseSlider.vue'
 import { registerComponents, vueUse } from '../../utils/plugins'
 
 const components = {
-  aBaseSlider
+  aSlider
 }
 
 const VuePlugin = {

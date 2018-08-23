@@ -1,7 +1,7 @@
-import aClickOutSide from './click-outside'
+import ClickOutside from './click-outside'
 import { registerDirectives, vueUse } from '../../utils/plugins'
 const directives = {
-  aClickOutSide
+  ClickOutside
 }
 
 const VuePlugin = {
