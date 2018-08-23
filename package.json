@@ -28,7 +28,8 @@
     "test": "jest",
     "lint": "eslint src scripts docs tests nuxt",
     "release": "npm run build && npm run test && standard-version",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook-build": "build-storybook -c .storybook -o site/"
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
@@ -47,6 +48,7 @@
     "@nuxtjs/pwa": "^2.0.5",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-notes": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@storybook/vue": "^3.4.10",

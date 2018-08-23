@@ -1,15 +1,15 @@
 import Badge from './Badge'
-import BaseAlert from './BaseAlert'
-import BaseButton from './BaseButton'
-import BaseCheckBox from './BaseCheckbox'
-import BaseDropdown from './BaseDropdown'
-import BaseInput from './BaseInput'
-import BaseNav from './BaseNav'
-import BasePagination from './BasePagination'
-import BaseProgress from './BaseProgress'
-import BaseRadio from './BaseRadio'
-import BaseSlider from './BaseSlider'
-import BaseSwitch from './BaseSwitch'
+import Alert from './Alert'
+import Button from './Button'
+import Checkbox from './Checkbox'
+import Dropdown from './Dropdown'
+import Input from './Input'
+import Nav from './Nav'
+import Pagination from './Pagination'
+import Progress from './Progress'
+import Radio from './Radio'
+import Slider from './Slider'
+import Switch from './Switch'
 import Card from './Card'
 import CloseButton from './CloseButton'
 import Icon from './Icon'
@@ -19,17 +19,17 @@ import Tabs from './Tabs'
 
 export {
   Badge,
-  BaseAlert,
-  BaseButton,
-  BaseCheckBox,
-  BaseDropdown,
-  BaseInput,
-  BaseNav,
-  BasePagination,
-  BaseProgress,
-  BaseRadio,
-  BaseSlider,
-  BaseSwitch,
+  Alert,
+  Button,
+  Checkbox,
+  Dropdown,
+  Input,
+  Nav,
+  Pagination,
+  Progress,
+  Radio,
+  Slider,
+  Switch,
   Card,
   CloseButton,
   Icon,
