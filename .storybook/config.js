@@ -4,10 +4,18 @@ import '../src/assets/scss/asyncy.scss';
 import Vue from 'vue';
 // import Vuex from 'vuex'; // Vue plugins
 import JSXAddon from 'storybook-addon-jsx';
+import { setOptions } from '@storybook/addon-options'
 import {setAddon, addDecorator} from '@storybook/vue'
 import AsyncVue from '../src/index';
 Vue.use(AsyncVue);
 setAddon(JSXAddon);
+
+setOptions({
+  name: 'Asyncy',
+  url: 'asyncy.com',
+  addonPanelInRight: true,
+  sortStoriesByKind: true
+})
 
 const styles = {padding: '40px 20px 20px 20px'}
 const PaddingDecoration = () => ({

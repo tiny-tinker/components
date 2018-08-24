@@ -48,6 +48,7 @@
     "@nuxtjs/pwa": "^2.0.5",
     "@storybook/addon-actions": "^3.4.10",
     "@storybook/addon-notes": "^3.4.10",
+    "@storybook/addon-options": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/react": "^3.4.10",
     "@storybook/vue": "^3.4.10",

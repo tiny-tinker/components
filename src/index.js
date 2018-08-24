@@ -1,10 +1,11 @@
 import BootstrapVue from 'bootstrap-vue' // Import Bootstrap-Vue as well
-import VueLazyload from 'vue-lazyload';
+import VueLazyload from 'vue-lazyload'
 import * as components from './components'
 import * as directives from './directives'
 import { vueUse } from './utils/plugins'
 import './assets/vendor/nucleo/css/nucleo.css'
 import './assets/vendor/font-awesome/css/font-awesome.css'
+import './assets/fonts/Gilroy/stylesheet.css' // Import Gilory font
 import './assets/scss/asyncy.scss'
 
 const VuePlugin = {

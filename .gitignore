@@ -17,3 +17,5 @@ coverage
 es
 docs/static/sw.js
 *.swp
+
+/site
