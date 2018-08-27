@@ -24,7 +24,7 @@
     "test": "jest",
     "lint": "eslint src scripts docs tests nuxt",
     "release": "npm run build && npm run test && standard-version",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9002 -c .storybook",
     "storybook-build": "build-storybook -c .storybook -o site/"
   },
   "dependencies": {
@@ -86,6 +86,7 @@
     "rollup-plugin-alias": "^1.4.0",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-livereload": "^0.6.0",
     "rollup-plugin-node-globals": "^1.2.1",
     "rollup-plugin-node-resolve": "^3.0.2",
@@ -100,6 +101,7 @@
     "storybook-addon-jsx": "^5.4.0",
     "style-loader": "^0.22.1",
     "uglify-es": "^3.3.6",
+    "url-loader": "^1.1.1",
     "vue-beta": "npm:vue@~2.5.17-beta.0",
     "vue-jest": "^2.1.1",
     "vue-latest": "npm:vue@~2.5.16",

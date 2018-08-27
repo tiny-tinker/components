@@ -1,4 +1,3 @@
-import path from 'path'
 import alias from 'rollup-plugin-alias'
 import vue from 'rollup-plugin-vue'
 import babel from 'rollup-plugin-babel'
@@ -9,8 +8,10 @@ import { uglify } from 'rollup-plugin-uglify'
 import livereload from 'rollup-plugin-livereload'
 import serve from 'rollup-plugin-serve'
 import replace from 'rollup-plugin-replace'
-import fs from 'fs'
+import copy from 'rollup-plugin-copy'
 import scss from 'rollup-plugin-scss'
+import fs from 'fs'
+import path from 'path'
 import { camelCase } from 'lodash'
 import { name, dependencies } from '../package.json'
 
@@ -24,8 +25,13 @@ if (!fs.existsSync(dist)) {
 }
 
 let plugins = [
+  copy({
+    './src/assets/fonts': './dist/fonts',
+    './src/assets/images': './dist/images',
+    verbose: true
+  }),
   scss({
-    output: './dist/assets/css/async-vue.css'
+    output: './dist/css/asyncy-vue.css'
   }),
   alias({
     vue$: 'vue/dist/vue.common.js',
