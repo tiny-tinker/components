@@ -20,6 +20,11 @@ if (!fs.existsSync(dist)) {
 }
 
 let plugins = [
+  copy({
+    './src/assets/fonts': './dist/fonts',
+    './src/assets/images': './dist/images',
+    verbose: true
+  }),
   scss(),
   alias({
     vue$: 'vue/dist/vue.common.js',
