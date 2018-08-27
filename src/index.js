@@ -4,7 +4,7 @@ import * as directives from './directives'
 import { vueUse } from './utils/plugins'
 import './assets/vendor/nucleo/css/nucleo.css'
 import './assets/vendor/font-awesome/css/font-awesome.css'
-import './assets/fonts/Gilroy/stylesheet.css' // Import Gilory font
+import './assets/vendor/gilroy/css/gilroy.css' // Import Gilory font
 import './assets/scss/asyncy.scss'
 
 const VuePlugin = {
