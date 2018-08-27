@@ -7,7 +7,7 @@
   "web": "dist/asyncy-vue-components.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
-  "style": "dist/asyncy-vue.css",
+  "style": "dist/css/asyncy-vue.css",
   "license": "MIT",
   "repository": {
     "type": "git",
