@@ -29,7 +29,7 @@ let plugins = [
     './src/assets/vendor/font-awesome/fonts/': './dist/fonts/',
     './src/assets/vendor/gilroy/fonts/': './dist/fonts/',
     './src/assets/vendor/nucleo/fonts/': './dist/fonts/',
-    './src/assets/images': './dist/images',
+    './src/assets/images/': './dist/images/',
     verbose: true
   }),
   scss({
