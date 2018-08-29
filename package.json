@@ -1,10 +1,10 @@
 {
-  "name": "asyncy-vue-components",
+  "name": "asyncy-vue",
   "version": "0.0.5",
   "description": "Shared vue components for Asyncy",
-  "main": "dist/asyncy-vue-components.common.js",
+  "main": "dist/asyncy-vue.common.js",
   "types": "src/index.d.ts",
-  "web": "dist/asyncy-vue-components.js",
+  "web": "dist/asyncy-vue.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "style": "dist/css/asyncy-vue.css",
