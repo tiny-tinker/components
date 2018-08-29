@@ -7,7 +7,6 @@ import commonjs from 'rollup-plugin-commonjs'
 import nodeGlobals from 'rollup-plugin-node-globals'
 import fs from 'fs'
 import scss from 'rollup-plugin-scss'
-import copy from 'rollup-plugin-copy'
 import { name, dependencies } from '../package.json'
 
 const base = path.resolve(__dirname, '..')

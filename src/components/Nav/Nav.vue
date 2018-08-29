@@ -12,6 +12,10 @@
             <slot name="brand">
                 <a class="navbar-brand" href="#" @click.prevent="onTitleClick">
                     {{title}}
+                    <img v-if="logo" :src="logo"/>
+                    <div v-if="isBeta" style="margin-left: 0.5rem; float:right">
+                      <a-badge type="primary">Beta</a-badge>
+                    </div>
                 </a>
             </slot>
             <a-navbar-toggle-button :toggled="toggled"
@@ -51,6 +55,11 @@ export default {
       default: "",
       description: "Title of navbar"
     },
+    logo: {
+      type: String,
+      default: null,
+      description: "Logo of navbar"
+    },
     contentId: {
       type: [String, Number],
       default: Math.random().toString(),
@@ -76,6 +85,11 @@ export default {
       type: Boolean,
       default: false,
       description: "Whether navbar should contain `navbar-expand-lg` class"
+    },
+    isBeta: {
+      type: Boolean,
+      default: false,
+      description: "Whether navbar should show `beta` badge"
     }
   },
   data() {
