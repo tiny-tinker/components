@@ -45,7 +45,7 @@
     "@storybook/addon-options": "^3.4.10",
     "@storybook/addons": "^3.4.10",
     "@storybook/vue": "^3.4.10",
-    "@vue/test-utils": "^1.0.0-beta.16",
+    "@vue/test-utils": "^1.0.0-beta.24",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.0.1",
@@ -102,8 +102,7 @@
     "vue-beta": "npm:vue@~2.5.17-beta.0",
     "vue-jest": "^2.1.1",
     "vue-loader": "14.2.2",
-    "vue-template-compiler": "^2.5.17",
-    "vue-test-utils": "1.0.0-beta.11"
+    "vue-template-compiler": "^2.5.17"
   },
   "jest": {
     "testRegex": "spec.js$",
