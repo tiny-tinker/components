@@ -35,13 +35,11 @@
     </nav>
 </template>
 <script>
-import { FadeTransition } from "vue2-transitions";
 import aNavbarToggleButton from "../NavbarToggleButton/NavbarToggleButton.vue";
 
 export default {
   name: "a-nav",
   components: {
-    FadeTransition,
     aNavbarToggleButton
   },
   props: {
