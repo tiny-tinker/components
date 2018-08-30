@@ -19,7 +19,9 @@ if (!fs.existsSync(dist)) {
 }
 
 let plugins = [
-  scss(),
+  scss({
+    output: './dist/css/asyncy-vue.css'
+  }),
   alias({
     vue$: 'vue/dist/vue.common.js',
     '@': path.resolve('./src/'),
@@ -27,7 +29,8 @@ let plugins = [
   }),
   vue({
     compileTemplate: true,
-    htmlMinifier: {collapseBooleanAttributes: false}
+    htmlMinifier: {collapseBooleanAttributes: false},
+    css: false
   }),
   babel({
     plugins: ['external-helpers'],

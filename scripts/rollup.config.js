@@ -42,7 +42,8 @@ let plugins = [
   }),
   vue({
     compileTemplate: true,
-    htmlMinifier: {collapseBooleanAttributes: false}
+    htmlMinifier: {collapseBooleanAttributes: false},
+    css: false
   }),
   babel({
     plugins: ['external-helpers'],
