@@ -7,6 +7,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import nodeGlobals from 'rollup-plugin-node-globals'
 import fs from 'fs'
 import scss from 'rollup-plugin-scss'
+import svg from 'rollup-plugin-svg'
 import { name, dependencies } from '../package.json'
 
 const base = path.resolve(__dirname, '..')
@@ -19,6 +20,7 @@ if (!fs.existsSync(dist)) {
 }
 
 let plugins = [
+  svg(),
   scss({
     output: './dist/css/asyncy-vue.css'
   }),

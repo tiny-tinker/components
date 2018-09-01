@@ -1,5 +1,6 @@
 import VueLazyload from 'vue-lazyload'
 import * as components from './components'
+import * as extraComponents from './extra-components'
 import * as directives from './directives'
 import { vueUse } from './utils/plugins'
 import './assets/vendor/nucleo/css/nucleo.css'
@@ -18,6 +19,11 @@ const VuePlugin = {
     // Register component plugins
     for (let plugin in components) {
       Vue.use(components[plugin])
+    }
+
+    // Register extra components {
+    for (let plugin in extraComponents) {
+      Vue.use(extraComponents[plugin])
     }
 
     // Register directive plugins

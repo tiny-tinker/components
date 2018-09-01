@@ -25,7 +25,7 @@ module.exports = {
         include: path.resolve(__dirname, "../")
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|mp4)$/,
         use: [
           {
             loader: 'file-loader',

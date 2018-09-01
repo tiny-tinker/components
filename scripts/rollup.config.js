@@ -10,6 +10,7 @@ import serve from 'rollup-plugin-serve'
 import replace from 'rollup-plugin-replace'
 import copy from 'rollup-plugin-copy'
 import scss from 'rollup-plugin-scss'
+import svg from 'rollup-plugin-svg'
 import fs from 'fs'
 import path from 'path'
 import { camelCase } from 'lodash'
@@ -32,6 +33,7 @@ let plugins = [
     './src/assets/images/': './dist/images/',
     verbose: true
   }),
+  svg(),
   scss({
     output: './dist/css/asyncy-vue.css'
   }),
