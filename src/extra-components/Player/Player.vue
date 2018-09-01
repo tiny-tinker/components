@@ -8,6 +8,7 @@
   import Plyr from 'asyncy-player'
   import 'asyncy-player/dist/plyr.css'
   import sprite from './sprite.svg'
+  
   export default {
     name: 'a-player',
     props: {
