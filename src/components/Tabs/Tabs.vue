@@ -29,7 +29,8 @@
                v-bind:aria-selected="tab.active"
                v-bind:class="[
                 {active: tab.active},
-                {'nav-link-bold': bold}
+                {'nav-link-bold': bold},
+                tabNavLinkClasses
                ]">
               <tab-item-content :tab="tab">
               </tab-item-content>
@@ -93,7 +94,7 @@ export default {
     tabShape: {
       type: String,
       default: 'pills',
-      description: "Tabs shape (pills|tabs|links)"
+      description: "Tabs shape (pills|tabs|links|icon-only)"
     },
     circle: {
       type: Boolean,
@@ -129,6 +130,11 @@ export default {
       type: [String, Object],
       default: "",
       description: "Tab Nav (ul) css classes"
+    },
+    tabNavLinkClasses: {
+      type: [String, Object],
+      default: "",
+      description: "Tab Nav (a) css classes"
     },
     tabContentClasses: {
       type: [String, Object],

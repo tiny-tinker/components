@@ -84,7 +84,7 @@ storiesOf('Components/', module).addWithJSX(
               </a-tabs>
           </div>
           <div class="col-lg-10 col-md-6 col-sm-12 mt-5 mt-lg-5">
-          <div class="mb-3">
+            <div class="mb-3">
                 <small class="text-uppercase font-weight-bold">With underlined text</small>
             </div>
             <a-tabs center bold tabShape="links" class="flex-column flex-md-row">
@@ -111,6 +111,51 @@ storiesOf('Components/', module).addWithJSX(
                             keffiyeh dreamcatcher synth.</p>
                     </a-tab-pane>
                 </a-card>
+            </a-tabs>
+          </div>
+          <div class="col-lg-10 col-md-6 col-sm-12 mt-5 mt-lg-5">
+            <div class="mb-3">
+              <small class="text-uppercase font-weight-bold">With Icon only</small>
+            </div>
+            <a-tabs center bold tabNavLinkClasses="color-gray" tabShape="icon-only" class="flex-column flex-md-row">
+              <a-card shadow>
+                <a-tab-pane title="Serverless HTTP">
+                  <template slot="title">
+                    <div class="h4">
+                      <i class="fa fa-windows mr-2"></i>
+                    </div>                    
+                  </template>
+                  <p class="description">Raw denim you probably haven't heard of them jean shorts
+                      Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                      cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                      keffiyeh dreamcatcher synth.</p>
+                  <p class="description">Raw denim you probably haven't heard of them jean shorts
+                      Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
+                </a-tab-pane>
+
+                <a-tab-pane title="Slack Bot">
+                  <template slot="title">
+                    <div class="h4">
+                      <i class="fa fa-apple mr-2"></i>
+                    </div>  
+                  </template>
+                    <p class="description">Cosby sweater eu banh mi, qui irure terry richardson ex
+                        squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+                        american apparel, butcher voluptate nisi qui.</p>
+                </a-tab-pane>
+
+                <a-tab-pane title="Machine Learning">
+                  <template slot="title">
+                    <div class="h4">
+                      <i class="fa fa-linux mr-2"></i>
+                    </div>
+                  </template>
+                    <p class="description">Raw denim you probably haven't heard of them jean shorts
+                        Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                        cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+                        keffiyeh dreamcatcher synth.</p>
+                </a-tab-pane>
+              </a-card>
             </a-tabs>
           </div>
       </div>

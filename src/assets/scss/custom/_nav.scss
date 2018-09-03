@@ -1,6 +1,10 @@
 .nav-link {
     color: $nav-link-color;
 
+		&.nav-link-bold {
+			font-weight: bold
+		}
+
     &:hover {
         color: theme-color("primary");
     }
@@ -87,21 +91,19 @@
 	display: flex;
 	justify-content: center;
 }
-.nav-links {
-		position: relative;
 
-    .nav-link.active,
-    .show > .nav-link {
-      color: $nav-links-link-active-color;
+// Nav "links"
+.nav-links {
+	position: relative;
+
+	.nav-link.active,
+	.show > .nav-link {
+		color: $nav-links-link-active-color;
 	}
 
 
 	.nav-link {
 		padding: 0.25rem 1.5rem;
-
-		&.nav-link-bold {
-			font-weight: bold
-		}
 
 		&:before {
 			background-color: $nav-links-link-active-color;
@@ -125,5 +127,19 @@
 			height: 100%;
 			background: $nav-links-link-active-color;
 		}
+	}
+}
+
+// Nav icon only
+
+.nav-icon-only {
+
+	div {
+		color: inherit;
+	}
+
+	.nav-link.active,
+	.show > .nav-link {
+		color: $nav-links-link-active-color !important;
 	}
 }
