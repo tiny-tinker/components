@@ -37,6 +37,7 @@
     "popper.js": "^1.12.9",
     "remove": "^0.1.5",
     "vue": "^2.5.17",
+    "vue-clipboard2": "^0.2.1",
     "vue-functional-data-merge": "^2.0.5",
     "vue-lazyload": "^1.2.6",
     "vue2-transitions": "^0.2.3"

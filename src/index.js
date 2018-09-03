@@ -1,4 +1,5 @@
 import VueLazyload from 'vue-lazyload'
+import VueClipboard from 'vue-clipboard2'
 import * as components from './components'
 import * as extraComponents from './extra-components'
 import * as directives from './directives'
@@ -32,6 +33,7 @@ const VuePlugin = {
     }
 
     Vue.use(VueLazyload)
+    Vue.use(VueClipboard)
   }
 }
 

@@ -17,6 +17,7 @@ import Icon from './Icon'
 import Modal from './Modal'
 import NavbarToggleButton from './NavbarToggleButton'
 import Tabs from './Tabs'
+import Tooltip from './Tooltip'
 
 export {
   Badge,
@@ -37,5 +38,6 @@ export {
   Icon,
   Modal,
   NavbarToggleButton,
-  Tabs
+  Tabs,
+  Tooltip
 }
