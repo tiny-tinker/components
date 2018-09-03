@@ -1,5 +1,5 @@
 <template>
-    <img :src="wordmark"/>
+    <img :src="wordmark" alt="asyncy wordmark logo"/>
 </template>
 
 <script>
