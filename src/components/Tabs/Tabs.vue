@@ -4,11 +4,13 @@
       <div class="nav-wrapper">
         <ul class="nav"
             role="tablist"
+            ref="tabsContainer"
             v-bind:class="
             [type ? `nav-pills-${type}`: '',
-              pills ? 'nav-pills': 'nav-tabs',
+              tabShape ? `nav-${tabShape}`: '',
              {'nav-pills-icons': icons},
              {'nav-fill': fill},
+             {'nav-center': center},
              {'nav-pills-circle': circle},
              {'justify-content-center': centered},
              tabNavClasses
@@ -16,6 +18,7 @@
 
           <li v-for="tab in tabs"
               class="nav-item"
+              ref="tabs"
               v-bind:key="tab.id || tab.title">
 
             <a data-toggle="tab"
@@ -24,16 +27,29 @@
                v-bind:href="`#${tab.id || tab.title}`"
                @click.prevent="activateTab(tab)"
                v-bind:aria-selected="tab.active"
-               v-bind:class="{active: tab.active}">
+               v-bind:class="[
+                {active: tab.active},
+                {'nav-link-bold': bold}
+               ]">
               <tab-item-content :tab="tab">
               </tab-item-content>
             </a>
 
           </li>
 
+          <div v-if="tabShape==='links'" 
+               class="border-decorator-container" 
+               :style="{ 
+                 width: tabDecoratorWidth, 
+                 marginLeft: tabDecoratorMargin 
+                }">
+            <div class="border-decorator"></div>
+          </div>
+
         </ul>
       </div>
     </template>
+
     <div slot="content" class="tab-content"
          v-bind:class="[tabContentClasses]">
       <slot v-bind="slotData"></slot>
@@ -44,6 +60,7 @@
 <script>
 import PillsLayout from "./PillsLayout.vue";
 import TabsLayout from "./TabsLayout.vue";
+
 export default {
   name: "a-tabs",
   components: {
@@ -73,10 +90,10 @@ export default {
       },
       description: "Tabs type (primary|info|danger|default|warning|success)"
     },
-    pills: {
-      type: Boolean,
-      default: true,
-      description: "Whether tabs are pills"
+    tabShape: {
+      type: String,
+      default: 'pills',
+      description: "Tabs shape (pills|tabs|links)"
     },
     circle: {
       type: Boolean,
@@ -85,8 +102,18 @@ export default {
     },
     fill: {
       type: Boolean,
-      default: true,
+      default: false,
       description: "Whether to fill each tab"
+    },
+    center: {
+      type: Boolean,
+      default: false,
+      description: "Whether to center the tabs"
+    },
+    bold: {
+      type: Boolean,
+      default: false,
+      description: "Whether tab letters are bold"
     },
     activeTab: {
       type: String,
@@ -130,7 +157,10 @@ export default {
   data() {
     return {
       tabs: [],
-      activeTabIndex: 0
+      activeTabIndex: 0,
+      tabsWidth:[], // store tabs width,
+      tabsContainerWidth: 0, // store tabs container width(<ul>)
+      tabsWidthSum: 0
     };
   },
   computed: {
@@ -142,6 +172,36 @@ export default {
         activeTabIndex: this.activeTabIndex,
         tabs: this.tabs
       };
+    },
+    /* For border-bottom decorate in "links" shaped tab */
+    tabDecoratorWidth: function() {      
+      if (this.tabsWidth.length > 0) {
+
+        // If tabs are overriding it's container - hide decoration
+        if (this.tabsWidthSum > this.tabsContainerWidth) {
+          return '0';
+        } else {
+          return this.tabsWidth[this.activeTabIndex] + 'px';
+        }
+      } else {
+        return '0';
+      }
+    },
+    tabDecoratorMargin: function() {
+      if (this.tabsWidth.length > 0) {
+
+        
+        let margin = (this.tabsContainerWidth - this.tabsWidthSum) / 2;
+        /* sumup the tabs width before active tab */
+        for (let i = 0; i < this.activeTabIndex; i ++) {
+          margin += this.tabsWidth[i];
+        }
+
+        return margin + 'px';
+      } 
+      else {
+        return '0';
+      }
     }
   },
   methods: {
@@ -176,6 +236,24 @@ export default {
       if (index > -1) {
         tabs.splice(index, 1);
       }
+    },
+    getTabsAndContainerWidth() {
+      /**
+       * get the tabs width & container width  - need this data for border-bottom 
+       * decoration for "links" shaped 
+       */
+      this.tabsWidth = [];
+      let sum = 0;
+      for (let i = 0; i < this.$refs.tabs.length; i++) {
+        this.tabsWidth.push(this.$refs.tabs[i].clientWidth);
+        sum += this.$refs.tabs[i].clientWidth;
+      }
+      this.tabsWidthSum = sum;
+
+      this.tabsContainerWidth = this.$refs.tabsContainer.clientWidth;
+    },
+    handleResize() {
+      this.getTabsAndContainerWidth();
     }
   },
   mounted() {
@@ -187,7 +265,16 @@ export default {
           this.activateTab(this.tabs[0]);
         }
       }
+
+      // Calculate tabs & container width
+      this.getTabsAndContainerWidth();
+
+      // Handle Resize event to recalculate the size of tabs & container width
+      window.addEventListener('resize', this.handleResize);
     });
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('resize', this.handleResize)
   },
   watch: {
     value(newVal) {

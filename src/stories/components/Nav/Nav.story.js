@@ -210,27 +210,27 @@ storiesOf('Components/', module).addWithJSX(
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link" href="#">
                         Documentation
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link" href="#">
                         About
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link" href="#">
                         Events
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#">
+                    <a class="nav-link color-orange" href="#">
                         Contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon hide-decoration" href="#" style="color:var(--pink)">
+                    <a class="nav-link hide-decoration color-pink" href="#">
                         We are Hiring!
                     </a>
                 </li>

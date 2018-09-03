@@ -82,3 +82,48 @@
         @include border-bottom-radius($card-border-radius);
     }
 }
+
+.nav-center {
+	display: flex;
+	justify-content: center;
+}
+.nav-links {
+		position: relative;
+
+    .nav-link.active,
+    .show > .nav-link {
+      color: $nav-links-link-active-color;
+	}
+
+
+	.nav-link {
+		padding: 0.25rem 1.5rem;
+
+		&.nav-link-bold {
+			font-weight: bold
+		}
+
+		&:before {
+			background-color: $nav-links-link-active-color;
+		}
+	}
+
+	.border-decorator-container {
+		position: absolute;
+		left: 0;
+		height: 2px;
+		bottom: -4px;
+		margin: 0;
+		border: none;
+		transition: .3s ease-in-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		.border-decorator {
+			width: $nav-links-link-decorator-width;
+			height: 100%;
+			background: $nav-links-link-active-color;
+		}
+	}
+}

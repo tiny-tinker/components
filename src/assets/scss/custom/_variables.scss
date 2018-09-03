@@ -642,6 +642,8 @@ $nav-pills-link-active-color:       color-yiq(theme-color("primary"));
 $nav-pills-link-active-bg:          theme-color("primary") !default;
 $nav-pills-box-shadow:              $btn-box-shadow !default;
 
+$nav-links-link-active-color:       darken(theme-color("primary"), 5%);
+$nav-links-link-decorator-width:    40%;
 // Navbar
 
 $navbar-transition:                 all .15s linear !default;
