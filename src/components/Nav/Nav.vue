@@ -12,7 +12,7 @@
             <slot name="brand">
                 <a class="navbar-brand" href="#" @click.prevent="onTitleClick">
                     {{title}}
-                    <img v-if="logo" :src="logo"/>
+                    <img v-if="logo" :src="logo" alt="asyncy logo"/>
                     <div v-if="isBeta" style="margin-left: 0.5rem; float:right">
                       <a-badge type="primary">Beta</a-badge>
                     </div>
