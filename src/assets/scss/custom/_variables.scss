@@ -468,7 +468,6 @@ $btn-line-height-lg:          $input-btn-line-height-lg !default;
 $btn-border-width:            $input-btn-border-width !default;
 
 $btn-font-weight:             600 !default;
-$btn-text-transform:          uppercase !default;
 $btn-letter-spacing:          .025em !default;
 $btn-box-shadow:              0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
 $btn-hover-box-shadow:        0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
@@ -679,7 +678,12 @@ $navbar-light-disabled-color:       rgba($black, .3);
 /*$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml !default;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;*/
 $navbar-light-toggler-border-color: transparent !default;
 
-
+// Snippet
+$snippet-light-color:               rgba($black, .7);
+$snippet-dark-color:                rgba($white, .95);
+$snippet-font-size-sm:              .75rem !default;
+$snippet-font-size:                 1.0rem !default;
+$snippet-font-size-lg:              1.25rem !default;
 // Alerts
 
 $alert-padding-y: 1rem !default;
