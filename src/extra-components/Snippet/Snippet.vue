@@ -116,11 +116,13 @@
 		methods: {
 			doCopy() {
 				this.$copyText(this.value).then(function (e) {
-					console.log(e);
 					this.bShowTooltip = true;
+
+					// Hide tooltip after 2S
 					setTimeout(function(){
 						this.bShowTooltip = false;
-					}.bind(this), 2000)
+					}.bind(this), 2000);
+					
 				}.bind(this), function (e) {
 					console.log(e)
 				});
