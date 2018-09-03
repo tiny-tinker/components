@@ -65,7 +65,7 @@
 .btn-neutral {
     color: theme-color("primary");
     &:hover, &:active {
-        color: theme-color("primary");
+        color: theme-color("primary") !important;
     }
 }
 
