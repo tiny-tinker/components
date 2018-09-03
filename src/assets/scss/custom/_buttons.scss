@@ -2,7 +2,6 @@
 
 .btn {
     position: relative;
-    text-transform: $btn-text-transform;
     transition: $transition-base;
     will-change: transform;
     letter-spacing: $btn-letter-spacing;
@@ -66,6 +65,10 @@
     color: theme-color("primary");
     &:hover, &:active {
         color: theme-color("primary") !important;
+    }
+
+    &:active {
+        border-color: darken(theme-color("neutral"), 10%) !important;
     }
 }
 
