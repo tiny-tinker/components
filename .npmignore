@@ -1,2 +1,2 @@
 *.story.js
-/src/stories/
+/src/stories/*
