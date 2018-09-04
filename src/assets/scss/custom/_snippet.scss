@@ -1,97 +1,115 @@
 .snippet {
-	position: relative;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-	min-width: 460px;
+  position: relative;
+  display: flex;
 
-	&.rounded {
-		border-radius: .25rem;
-	}
+  .snippet-code {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    overflow-x: auto;
 
-	.snippet-text {
-		display: flex;
-		align-items: center;
-		padding: .65rem .75rem;
-		margin-bottom: 0;
-		font-weight: 400;
-		line-height: 1.5;
-		text-align: center;
-		white-space: nowrap;
-	}
+    &.rounded {
+      border-radius: .25rem;
+    }
 
-	.snippet-prepend, .snippet-append {
-		display: flex;
-		color: $green;
-	}
+    .snippet-text {
+      display: flex;
+      align-items: center;
+      padding: .65rem .75rem;
+      margin-bottom: 0;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      white-space: nowrap;
+    }
 
-	.snippet-prepend {
-		margin-right: -1px;
-	}
+    .snippet-prepend, .snippet-append {
+      display: flex;
+      color: $green;
+    }
 
-	.snippet-append {
-		margin-left: -1px;
-	}
+    .snippet-prepend {
+      margin-right: -1px;
+    }
 
-	.snippet-body {
-		position: relative;
-		flex: 1 1 auto;
-		width: 1%;
-		margin-bottom: 0;
-		display: flex;
-		padding: .375rem 0;
-		line-height: 1.5;
-		background: transparent;
-		border: none;
-		align-items: center;
-		font-size: inherit
-	}
+    .snippet-append {
+      margin-left: -1px;
+    }
 
-	&.snippet-light {
-		background: white;
-		.snippet-body {
-			color: $snippet-light-color;
-		}
-	}
+    .snippet-body {
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-bottom: 0;
+      display: flex;
+      padding: .375rem 0;
+      line-height: 1.5;
+      background: transparent;
+      border: none;
+      align-items: center;
+      font-size: inherit
+    }
 
-	&.snippet-dark {
-		background: black;
+    &.snippet-light {
+      background: white;
+      .snippet-body {
+        color: $snippet-light-color;
+      }
+    }
 
-		.snippet-body {
-			color: $snippet-dark-color;	
-		}
-	}
+    &.snippet-dark {
+      background: black;
 
-	&.snippet-transparent {
-		background: transparent;
-	}
+      .snippet-body {
+        color: $snippet-dark-color;
+      }
+    }
 
-	&.snippet-center {
-		justify-content: center;
-		align-items: center;
+    &.snippet-transparent {
+      background: transparent;
+    }
 
-		.snippet-body {
-			flex: unset;
-			width: unset;
-		}
-	}
+    &.snippet-center {
+      /*justify-content: center;*/
+      align-items: center;
 
-	&.snippet-sm {
-		font-size: $snippet-font-size-sm;
-	}
-	
-	&.snippet-default {
-		font-size: $snippet-font-size;
-	}
+      .snippet-body {
+        flex: unset;
+        width: unset;
+      }
+    }
 
-	&.snippet-lg {
-		font-size: $snippet-font-size-lg;
-	}
+    &.snippet-sm {
+      font-size: $snippet-font-size-sm;
+    }
 
-	.copy-btn-container {
-		position: absolute;
-		margin-top: 50%;
-		bottom: -15px;
-		right: 10%;
-	}
+    &.snippet-default {
+      font-size: $snippet-font-size;
+    }
+
+    &.snippet-lg {
+      font-size: $snippet-font-size-lg;
+    }
+
+    &.snippet-fixed-height {
+      flex-shrink: 0;
+
+      .snippet-prepend, .snippet-append, .snippet-body {
+        flex-shrink: 0;
+      }
+
+    }
+  }
+
+  .copy-btn-container {
+    position: absolute;
+    margin-top: 50%;
+    bottom: -15px;
+    right: 10%;
+  }
 }
+
+
+

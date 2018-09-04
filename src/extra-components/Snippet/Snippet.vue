@@ -1,46 +1,47 @@
 <template>
-	<div class="snippet" v-bind:class="[
+  <div class="snippet">
+    <div class="snippet-code" v-bind:class="[
 						{[`snippet-${effect}`]: effect},
 						{'snipppet-transparent': transparent},
 						{[`bg-${type}`]: type},
 						{'rounded': round},
 						{[`snippet-${size}`]: size},
-						{'snippet-center': center}
+						{'snippet-center': center},
+            {'snippet-fixed-height': fixedHeight}
 					]">
-		<div class="snippet-prepend">
-			<slot name="snippet-prepend">
-				<span class="snippet-text" v-bind:class="prependClasses">
-						{{prependText}}
-					</span>
-			</slot>
-		</div>
-		<p class="snippet-body">
-			{{value}}
-		</p>
-		<div class="snippet-append">
-			<slot name="snippet-append">
-				<span class="snippet-text" v-bind:class="appendClasses">{{appendText}}</span>
-			</slot>
-		</div>
-		<div class="copy-btn-container">
-			<a-button type="neutral" 
+      <div class="snippet-prepend">
+        <slot name="snippet-prepend">
+          <div class="snippet-text" v-bind:class="prependClasses">{{prependText}}</div>
+        </slot>
+      </div>
+      <div class="snippet-body">
+        {{value}}
+      </div>
+      <div class="snippet-append">
+        <slot name="snippet-append">
+          <div class="snippet-text" v-bind:class="appendClasses">{{appendText}}</div>
+        </slot>
+      </div>
+    </div>
+    <div class="copy-btn-container">
+			<a-button type="neutral"
 								class="snippet-button shadow"
-								ref="copyBtn" 
+								ref="copyBtn"
 								size="sm"
 								title="Copied!"
 								@click="doCopy"
 							>
 							Copy
 			</a-button>
-			<a-tooltip 	:show.sync="bShowTooltip" 
-									:target="() => $refs.copyBtn" 
-									placement="bottom" 
+			<a-tooltip 	:show.sync="bShowTooltip"
+									:target="() => $refs.copyBtn"
+									placement="bottom"
 									title="Copied!"
 									triggers="click blur">
-				
+
 			</a-tooltip>
 		</div>
-	</div>
+  </div>
 </template>
 
 <script>
@@ -105,8 +106,13 @@
 			readOnly: {
 				type: Boolean,
 				default: true,
-				description: "Whete code snippet is read-only"
-			}
+				description: "Whether code snippet is read-only"
+      },
+      fixedHeight: {
+        type: Boolean,
+        default: true,
+        description: "Whether snippet has fixed"
+      }
 		},
 		data() {
 			return {
@@ -122,7 +128,7 @@
 					setTimeout(function(){
 						this.bShowTooltip = false;
 					}.bind(this), 2000);
-					
+
 				}.bind(this), function (e) {
 					console.log(e)
 				});
