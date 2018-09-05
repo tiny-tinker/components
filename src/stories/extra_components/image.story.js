@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
-import team1 from '../static/img/theme/team-1-800x800.jpg'
-import team2 from '../static/img/theme/team-2-800x800.jpg'
-import team3 from '../static/img/theme/team-3-800x800.jpg'
-import team4 from '../static/img/theme/team-4-800x800.jpg'
+import team1 from '@assets/img/theme/team-1-800x800.jpg'
+import team2 from '@assets/img/theme/team-2-800x800.jpg'
+import team3 from '@assets/img/theme/team-3-800x800.jpg'
+import team4 from '@assets/img/theme/team-4-800x800.jpg'
 
 storiesOf('Extra Components/', module).addWithJSX(
   'Image',

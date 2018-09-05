@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import logo from '../../../assets/images/logo.svg'
+import logo from '@assets/img/logo.svg'
 storiesOf('Components/', module).addWithJSX(
   'Navs',
   () => ({

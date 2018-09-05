@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/vue'
-import githubSvg from '../../static/img/icons/common/github.svg'
-import googleSvg from '../../static/img/icons/common/google.svg'
+import githubSvg from '@assets/img/icons/common/github.svg'
+import googleSvg from '@assets/img/icons/common/google.svg'
 
 storiesOf('Components/', module).addWithJSX(
   'Modal',
