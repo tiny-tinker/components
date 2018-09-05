@@ -1,6 +1,6 @@
 {
   "name": "asyncy-vue",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Shared vue components for Asyncy",
   "main": "dist/asyncy-vue.common.js",
   "types": "src/index.d.ts",
