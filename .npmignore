@@ -1,2 +1,8 @@
 *.story.js
 /src/stories/*
+/tests
+.editorconfig
+.jshintrc
+.storybook
+.eslintignore
+.eslintrc.js
