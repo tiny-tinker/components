@@ -16,6 +16,7 @@
 }
 
 .navbar-brand {
+    margin-left: $navbar-padding-x;
     font-size: $font-size-sm;
     font-weight: 600;
     text-transform: uppercase;
@@ -54,8 +55,8 @@
     &:before {
       content: "";
       position: absolute;
-      left: 50%;
-      right: 50%;
+      left: 51%;
+      right: 51%;
       bottom: 4px;
       opacity: .7;
       height: 2px;
