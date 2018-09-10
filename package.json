@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tiny-tinker/asyncy-vue.git"
+    "url": "git+https://github.com/asyncy/components.git"
   },
   "files": [
     "src",
@@ -126,7 +126,7 @@
   },
   "author": "Eric Lee",
   "bugs": {
-    "url": "https://github.com/asyncy/ui/issues"
+    "url": "https://github.com/asyncy/components/issues"
   },
-  "homepage": "https://github.com/asyncy/ui#readme"
+  "homepage": "https://github.com/asyncy/components#readme"
 }
