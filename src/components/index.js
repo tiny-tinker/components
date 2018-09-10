@@ -2,6 +2,7 @@ import Badge from './Badge'
 import Alert from './Alert'
 import Button from './Button'
 import Checkbox from './Checkbox'
+import Cookie from './Cookie'
 import Dropdown from './Dropdown'
 import Input from './Input'
 import Nav from './Nav'
@@ -22,6 +23,7 @@ export {
   Alert,
   Button,
   Checkbox,
+  Cookie,
   Dropdown,
   Input,
   Nav,
